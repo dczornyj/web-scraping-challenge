@@ -9,14 +9,13 @@ app = Flask(__name__)
 app.config["MONGO_URI"]= 'mongodb://localhost:27017/mars_app'
 mongo=PyMongo(app)
 
-
 @app.route("/")
 def home():    
     # Find one record of data from the mongo database
     mars_page_scraped = mongo.db.collection.find_one()
 
     # Return template and data
-    return render_template("index.html", mars_info=mars_page_scraped)
+    return render_template("index.html", mars_info=mars_page_scraped, )
 
 
 @app.route("/scrape")
@@ -25,6 +24,8 @@ def scrape():
     # Run the scrape function
     mars_data = scrape_mars.scrape_data()
 
+    #for loop for images in mars hemisphere
+    
     # Insert the record
     mongo.db.collection.update_one({}, {"$set": mars_data}, upsert=True)
 

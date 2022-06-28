@@ -1,0 +1,45 @@
+.jumbotron {
+    padding: 0.5em;
+    background-color: brown;
+    font-style:inherit;
+    text-align: center ;
+    font-size: 45px;
+}
+
+.news_header {
+ 
+    padding: 0.25em;
+    background-color: brown;
+    font-weight: bolder;
+}
+
+.article_descript {
+    font-size: 18px;
+}
+
+
+.header_feat_img {
+ 
+    padding: 0.25em;
+    background-color: brown;
+    font-weight: bolder;
+}
+.article {
+    font-style: italic;
+    font-size: 22px;
+
+}
+
+.table_header {
+    padding: 0.25em;
+    background-color: brown;
+    font-weight: bolder;
+}
+
+.hems_images_header {
+    padding: 0.25em;
+    background-color: brown;
+    font-weight: bolder;
+}
+
+

@@ -64,8 +64,9 @@ def scrape_data():
     mars_earth_comparison
 
 
-    #express the data from the table as an HTML Table String
-    mars_earth_compare_string=mars_earth_comparison.to_html()
+
+    #express the data from the table as an HTML Table String. WE ADDED MORE PERAMETERS TO MAKE OUR TABLE PRETTIER
+    mars_earth_compare_string=mars_earth_comparison.to_html(header = False, index = False, classes= "table table-striped") 
     mars_earth_facts=mars_earth_compare_string.replace('\n','')
     mars_earth_facts
 
@@ -211,11 +212,11 @@ def scrape_data():
         "mars_feat_img" : featured_image_url,
         "mars_earth_table": mars_earth_facts,
         "hems_titles_imgs" : mars_hemispheres_list
+
     }
 
     browser.quit()
 
-
-
+    return(mars_data)
 
 
